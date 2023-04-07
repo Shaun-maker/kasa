@@ -5,7 +5,7 @@ function Card() {
   return (
     <figure className="card-container">
       <img className="card-img" src={accomodationImg} alt="tata" />
-      <figcation className="card-legend">Titre de la location</figcation>
+      <figcaption className="card-legend">Titre de la location</figcaption>
       <div className="gradient-effect"></div>
     </figure>
   );

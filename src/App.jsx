@@ -1,9 +1,19 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLoaderData,
+} from 'react-router-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import ErrorPage from './pages/Error';
 import PropertyPage from './pages/PropertyPage';
+
+async function fetchData() {
+  const response = await fetch('logements.json');
+  const datas = await response.json();
+  return datas;
+}
 
 const router = createBrowserRouter([
   {
@@ -13,6 +23,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+        loader: fetchData,
       },
       {
         path: 'a-propos',
