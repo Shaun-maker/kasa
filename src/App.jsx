@@ -1,4 +1,5 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import Layout from './pages/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import ErrorPage from './pages/Error';
@@ -7,16 +8,18 @@ import PropertyPage from './pages/PropertyPage';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: 'logements/:logementId',
-    element: <PropertyPage />,
-  },
-  {
-    path: '/a-propos',
-    element: <About />,
+    children: [
+      {
+        path: 'a-propos',
+        element: <About />,
+      },
+      {
+        path: 'logements/:logementId',
+        element: <PropertyPage />,
+      },
+    ],
   },
 ]);
 

@@ -7,6 +7,29 @@ body {
   margin: 0;
 }
 
+/* fonts */
+@font-face {
+  font-family: montserrat;
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./assets/fonts/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./assets/fonts/Montserrat-Bold.ttf);
+  font-weight: 700;
+}
+
+html {
+  font-family: montserrat;
+}
+
 .main {
   max-width: 1440px;
   margin: 0 auto;
