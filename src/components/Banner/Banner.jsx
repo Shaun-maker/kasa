@@ -1,18 +1,13 @@
-import bannerImg from '../../assets/images/top-banner.jpg';
 import './Banner.css';
 
 function Banner() {
   return (
-    <figure className="top-banner">
-      <img
-        className="top-banner-img"
-        src={bannerImg}
-        alt="Magnifique paysage forestier"
-      />
+    <div className="top-banner">
+      <div className="top-banner-img"></div>
       <figcaption className="top-banner-legend">
         Chez vous, partout et ailleurs
       </figcaption>
-    </figure>
+    </div>
   );
 }
 
