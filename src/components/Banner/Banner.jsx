@@ -9,6 +9,9 @@ function Banner() {
         src={bannerImg}
         alt="Magnifique paysage forestier"
       />
+      <figcaption className="top-banner-legend">
+        Chez vous, partout et ailleurs
+      </figcaption>
     </figure>
   );
 }

@@ -7,10 +7,13 @@ import PropertyPage from './pages/PropertyPage';
 
 const router = createBrowserRouter([
   {
-    path: '/',
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
       {
         path: 'a-propos',
         element: <About />,
