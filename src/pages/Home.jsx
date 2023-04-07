@@ -5,19 +5,15 @@ import Cart from '../components/Card/Card';
 import './Home.css';
 
 function Home() {
-  const datas = useLoaderData();
-  console.log(datas);
+  const accommodationsDatas = useLoaderData();
 
   return (
     <main>
       <Banner />
       <div className="gallery-cards-container">
-        <Cart />
-        <Cart />
-        <Cart />
-        <Cart />
-        <Cart />
-        <Cart />
+        {accommodationsDatas.map(({ id, cover, title }) => (
+          <Cart key={id} cover={cover} title={title} />
+        ))}
       </div>
     </main>
   );

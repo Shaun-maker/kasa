@@ -1,11 +1,11 @@
 import './Card.css';
 import accomodationImg from '../../assets/images/base-gradient.jpg';
 
-function Card() {
+function Card({ cover, title }) {
   return (
     <figure className="card-container">
-      <img className="card-img" src={accomodationImg} alt="tata" />
-      <figcaption className="card-legend">Titre de la location</figcaption>
+      <img className="card-img" src={cover} alt="tata" />
+      <figcaption className="card-legend">{title}</figcaption>
       <div className="gradient-effect"></div>
     </figure>
   );
