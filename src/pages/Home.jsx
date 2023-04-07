@@ -4,7 +4,7 @@ import './Home.css';
 
 function Home() {
   return (
-    <>
+    <main>
       <Banner />
       <div className="gallery-cards-container">
         <Cart />
@@ -14,7 +14,7 @@ function Home() {
         <Cart />
         <Cart />
       </div>
-    </>
+    </main>
   );
 }
 

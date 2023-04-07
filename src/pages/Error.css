@@ -1,0 +1,25 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-code {
+  color: #ff6060;
+  font-weight: 700;
+  font-size: 256px;
+}
+
+.error-message {
+  color: #ff6060;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.full-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
