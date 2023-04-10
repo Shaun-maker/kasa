@@ -1,12 +1,16 @@
 import './Banner.css';
 
-function Banner() {
+function Banner({ topBannerImg, message }) {
   return (
     <div className="top-banner">
-      <div className="top-banner-img"></div>
-      <figcaption className="top-banner-legend">
-        Chez vous, partout et ailleurs
-      </figcaption>
+      <figure className="top-banner-container-img">
+        <img
+          className="top-banner-img"
+          src={topBannerImg}
+          alt="Magnifique paysage de montagne et forêt"
+        />
+      </figure>
+      <figcaption className="top-banner-legend">{message}</figcaption>
     </div>
   );
 }

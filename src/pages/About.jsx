@@ -4,7 +4,7 @@ import topBannerImg from '../assets/images/about-top-banner.jpg';
 function About() {
   return (
     <main>
-      <Banner />
+      <Banner topBannerImg={topBannerImg} />
     </main>
   );
 }
