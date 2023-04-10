@@ -1,5 +1,4 @@
 import './Card.css';
-import accomodationImg from '../../assets/images/base-gradient.jpg';
 
 function Card({ cover, title }) {
   return (

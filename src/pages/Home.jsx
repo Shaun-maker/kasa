@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Banner from '../components/Banner/Banner';
 import Cart from '../components/Card/Card';
