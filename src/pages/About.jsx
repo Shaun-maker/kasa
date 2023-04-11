@@ -6,7 +6,7 @@ function About() {
   return (
     <main>
       <Banner topBannerImg={topBannerImg} />
-      <Collapse />
+      <Collapse collapseMargin="my-32" />
     </main>
   );
 }

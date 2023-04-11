@@ -3,9 +3,9 @@ import chevronUp from '../../assets/icons/chevron-up-white.svg';
 import './collapse.css';
 
 // see if it is possible to update className with props, for margin in main container
-function Collapse() {
+function Collapse({ collapseMargin }) {
   return (
-    <div className="collapse-container">
+    <div className={`collapse-container ${collapseMargin}`}>
       <div className="collapse-banner">
         <p className="collapse-title">Fiabilité</p>
         <figure className="collapse-container-img">
