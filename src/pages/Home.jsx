@@ -8,7 +8,7 @@ function Home() {
   const accommodationsDatas = useLoaderData();
 
   return (
-    <main>
+    <>
       <Banner
         topBannerImg={topBannerImg}
         message="Chez vous, partout et ailleurs"
@@ -18,7 +18,7 @@ function Home() {
           <Cart key={id} cover={cover} title={title} />
         ))}
       </div>
-    </main>
+    </>
   );
 }
 

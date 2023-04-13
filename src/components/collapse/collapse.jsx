@@ -3,7 +3,7 @@ import chevronDown from '../../assets/icons/chevron-down-white.svg';
 import chevronUp from '../../assets/icons/chevron-up-white.svg';
 import './collapse.css';
 
-function Collapse({ collapseMargin }) {
+function Collapse({ collapseMargin, title, content }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={`collapse-container ${collapseMargin}`}>
@@ -11,7 +11,7 @@ function Collapse({ collapseMargin }) {
         className="collapse-banner"
         onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
       >
-        <p className="collapse-title">Fiabilité</p>
+        <p className="collapse-title">{title}</p>
         <figure className="collapse-container-img">
           <img
             className="collapse-img"
@@ -21,9 +21,7 @@ function Collapse({ collapseMargin }) {
         </figure>
       </div>
       <p className={`collapse-content ${isOpen ? 'open' : 'closed'}`}>
-        La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
-        comportement discriminatoire ou de perturbation du voisinage entraînera
-        une exclusion de notre plateforme.
+        {content}
       </p>
     </div>
   );
