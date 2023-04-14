@@ -1,7 +1,7 @@
 import './PropertyTag.css';
 
 function PropertyTags({ tag }) {
-  return <div className="tag">{tag}</div>;
+  return <li className="tag">{tag}</li>;
 }
 
 export default PropertyTags;

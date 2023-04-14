@@ -3,6 +3,7 @@ import './PropertyPage.css';
 import Carousel from '../components/Carousel/Carousel';
 import PropertyName from '../components/PropertyName/PropertyName';
 import Tag from '../components/PropertyTag/PropertyTag';
+import Avatar from '../components/Avatar/Avatar';
 import fetchData from '../datas/api';
 
 async function getProperty(propertyId) {
@@ -22,11 +23,18 @@ function Property() {
   return (
     <>
       <Carousel pictures={property.pictures} title={property.title} />
-      <PropertyName title={property.title} location={property.location} />
-      <div className="tag-container">
-        {property.tags.map((tag) => (
-          <Tag tag={tag} />
-        ))}
+      <div className="flex justify-between">
+        <div>
+          <PropertyName title={property.title} location={property.location} />
+          <ul className="tag-container">
+            {property.tags.map((tag) => (
+              <Tag tag={tag} />
+            ))}
+          </ul>
+        </div>
+        <div>
+          <Avatar name={property.host.name} picture={property.host.picture} />
+        </div>
       </div>
     </>
   );
