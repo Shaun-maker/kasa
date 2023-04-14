@@ -1,12 +1,17 @@
 import './Card.css';
+import { Link } from 'react-router-dom';
 
-function Card({ cover, title }) {
+function Card({ id, cover, title }) {
   return (
-    <figure className="card-container">
-      <img className="card-img" src={cover} alt="tata" />
-      <figcaption className="card-legend">{title}</figcaption>
-      <div className="gradient-effect"></div>
-    </figure>
+    <>
+      <Link to={`logements/${id}`}>
+        <figure className="card-container">
+          <img className="card-img" src={cover} alt="tata" />
+          <figcaption className="card-legend">{title}</figcaption>
+          <div className="gradient-effect"></div>
+        </figure>
+      </Link>
+    </>
   );
 }
 

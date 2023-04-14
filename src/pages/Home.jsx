@@ -15,7 +15,7 @@ function Home() {
       />
       <div className="gallery-cards-container">
         {accommodationsDatas.map(({ id, cover, title }) => (
-          <Cart key={id} cover={cover} title={title} />
+          <Cart key={id} id={id} cover={cover} title={title} />
         ))}
       </div>
     </>
