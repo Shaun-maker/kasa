@@ -5,7 +5,7 @@ import topBannerImg from '../assets/images/home-top-banner.jpg';
 import './Home.css';
 
 function Home() {
-  const accommodationsDatas = useLoaderData();
+  const propertiesDatas = useLoaderData();
 
   return (
     <>
@@ -14,7 +14,7 @@ function Home() {
         message="Chez vous, partout et ailleurs"
       />
       <div className="gallery-cards-container">
-        {accommodationsDatas.map(({ id, cover, title }) => (
+        {propertiesDatas.map(({ id, cover, title }) => (
           <Cart key={id} id={id} cover={cover} title={title} />
         ))}
       </div>

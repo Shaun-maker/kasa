@@ -5,6 +5,7 @@ import About from './pages/About';
 import ErrorPage from './pages/Error';
 import PropertyPage from './pages/PropertyPage';
 import fetchData from './datas/api';
+import { loader as propertyLoader } from './pages/PropertyPage';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: 'logements/:logementId',
         element: <PropertyPage />,
+        loader: propertyLoader,
       },
     ],
   },
