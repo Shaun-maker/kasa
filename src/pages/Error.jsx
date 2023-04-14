@@ -8,17 +8,19 @@ function ErrorPage() {
   console.log(error);
 
   return (
-    <main className="full-container">
-      <Header />
-      <div className="error-container">
-        <p className="error-code">{error.status}</p>
-        <p className="error-message">{error.message || error.statusText}</p>
-        <p className="error-message">
-          Oups! La page que vous demandez n'existe pas.
-        </p>
-      </div>
+    <>
+      <main>
+        <Header />
+        <div className="error-container">
+          <p className="error-code">{error.status}</p>
+          <p className="error-message">{error.message || error.statusText}</p>
+          <p className="error-message">
+            Oups! La page que vous demandez n'existe pas.
+          </p>
+        </div>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 

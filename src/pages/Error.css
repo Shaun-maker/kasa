@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .error-code {
@@ -15,11 +17,4 @@
   font-weight: 500;
   font-size: 24px;
   margin-bottom: 32px;
-}
-
-.full-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
