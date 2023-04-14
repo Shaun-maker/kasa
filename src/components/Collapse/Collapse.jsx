@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import chevronDown from '../../assets/icons/chevron-down-white.svg';
 import chevronUp from '../../assets/icons/chevron-up-white.svg';
-import './collapse.css';
+import './Collapse.css';
 
 function Collapse({ collapseMargin, title, content }) {
   const [isOpen, setIsOpen] = useState(false);

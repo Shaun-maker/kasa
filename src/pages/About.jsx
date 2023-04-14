@@ -1,6 +1,6 @@
 import Banner from '../components/Banner/Banner';
 import topBannerImg from '../assets/images/about-top-banner.jpg';
-import Collapse from '../components/collapse/collapse';
+import Collapse from '../components/Collapse/Collapse';
 
 function About() {
   return (
