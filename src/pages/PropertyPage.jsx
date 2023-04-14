@@ -1,4 +1,8 @@
 import { useLoaderData } from 'react-router-dom';
+import './PropertyPage.css';
+import Carousel from '../components/Carousel/Carousel';
+import PropertyName from '../components/PropertyName/PropertyName';
+import Tag from '../components/PropertyTag/PropertyTag';
 import fetchData from '../datas/api';
 
 async function getProperty(propertyId) {
@@ -14,7 +18,18 @@ export function loader({ params }) {
 
 function Property() {
   const property = useLoaderData();
-  return <div>Hello ! This is a page for a property</div>;
+  console.log(property);
+  return (
+    <>
+      <Carousel pictures={property.pictures} title={property.title} />
+      <PropertyName title={property.title} location={property.location} />
+      <div className="tag-container">
+        {property.tags.map((tag) => (
+          <Tag tag={tag} />
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default Property;

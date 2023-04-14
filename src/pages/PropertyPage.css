@@ -1,0 +1,5 @@
+.tag-container {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+}
