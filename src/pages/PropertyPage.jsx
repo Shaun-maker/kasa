@@ -4,6 +4,7 @@ import Carousel from '../components/Carousel/Carousel';
 import PropertyName from '../components/PropertyName/PropertyName';
 import Tag from '../components/PropertyTag/PropertyTag';
 import Avatar from '../components/Avatar/Avatar';
+import Rates from '../components/Rates/Rates';
 import fetchData from '../datas/api';
 
 async function getProperty(propertyId) {
@@ -27,13 +28,14 @@ function Property() {
         <div>
           <PropertyName title={property.title} location={property.location} />
           <ul className="tag-container">
-            {property.tags.map((tag) => (
-              <Tag tag={tag} />
+            {property.tags.map((tag, index) => (
+              <Tag key={`tag-${index}`} tag={tag} />
             ))}
           </ul>
         </div>
         <div>
           <Avatar name={property.host.name} picture={property.host.picture} />
+          <Rates rate={property.rating} />
         </div>
       </div>
     </>
