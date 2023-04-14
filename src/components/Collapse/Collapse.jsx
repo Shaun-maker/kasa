@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import chevronDown from '../../assets/icons/chevron-down-white.svg';
 import chevronUp from '../../assets/icons/chevron-up-white.svg';
 import './Collapse.css';
 
-function Collapse({ collapseMargin, title, content }) {
+function Collapse({ collapseMargin, title, content, open }) {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className={`collapse-container ${collapseMargin}`}>
       <div
