@@ -6,6 +6,10 @@ import './Collapse.css';
 function Collapse({ collapseMargin, title, content, open }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (open) setIsOpen(true);
+  }, [open]);
+
   return (
     <div className={`collapse-container ${collapseMargin}`}>
       <div
