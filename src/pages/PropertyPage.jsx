@@ -5,6 +5,7 @@ import PropertyName from '../components/PropertyName/PropertyName';
 import Tag from '../components/PropertyTag/PropertyTag';
 import Avatar from '../components/Avatar/Avatar';
 import Rates from '../components/Rates/Rates';
+import Collapse from '../components/Collapse/Collapse';
 import fetchData from '../datas/api';
 
 async function getProperty(propertyId) {
@@ -20,7 +21,6 @@ export function loader({ params }) {
 
 function Property() {
   const property = useLoaderData();
-  console.log(property);
   return (
     <>
       <Carousel pictures={property.pictures} title={property.title} />
@@ -33,10 +33,22 @@ function Property() {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="property-avatar-rates-container">
           <Avatar name={property.host.name} picture={property.host.picture} />
           <Rates rate={property.rating} />
         </div>
+      </div>
+      <div className="property-collapse-container">
+        <Collapse
+          addClass="property-collapse"
+          title="Description"
+          content={property.description}
+        />
+        <Collapse
+          addClass="property-collapse"
+          title="Équipements"
+          content={property.equipements}
+        />
       </div>
     </>
   );

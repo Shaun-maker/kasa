@@ -8,14 +8,14 @@ function About() {
       <Banner topBannerImg={topBannerImg} />
       <div>
         <Collapse
-          collapseMargin="my-32"
+          addClass="my-32"
           title="Fiabilité"
           content="Les annonces postées sur Kasa garantissent une fiabilité totale.
           Les photos sont conformes aux logements, et toutes les informations sont 
           régulièrement vérifiées  par nos équipes."
         />
         <Collapse
-          collapseMargin="my-32"
+          addClass="my-32"
           title="Respect"
           content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
           comportement discriminatoire ou de perturbation du voisinage entraînera
@@ -23,7 +23,7 @@ function About() {
           open={true}
         />
         <Collapse
-          collapseMargin="my-32"
+          addClass="my-32"
           title="Service"
           content="Nos équipes se tiennent à votre disposition pour vous fournir
           une expérience parfaite. N'hésitez pas à nous contacter si vous avez 

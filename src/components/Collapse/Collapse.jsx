@@ -3,7 +3,7 @@ import chevronDown from '../../assets/icons/chevron-down-white.svg';
 import chevronUp from '../../assets/icons/chevron-up-white.svg';
 import './Collapse.css';
 
-function Collapse({ collapseMargin, title, content, open }) {
+function Collapse({ addClass, title, content, open }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ function Collapse({ collapseMargin, title, content, open }) {
   }, [open]);
 
   return (
-    <div className={`collapse-container ${collapseMargin}`}>
+    <div className={`collapse-container ${addClass}`}>
       <div
         className="collapse-banner"
         onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
