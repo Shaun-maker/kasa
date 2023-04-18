@@ -3,13 +3,12 @@ import chevronDown from '../../assets/icons/chevron-down-white.svg';
 import chevronUp from '../../assets/icons/chevron-up-white.svg';
 import './Collapse.css';
 
-function Collapse({ addClass, title, content, open }) {
+function Collapse({ addClass, title, content, open, isList }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (open) setIsOpen(true);
   }, [open]);
-
   return (
     <div className={`collapse-container ${addClass}`}>
       <div
@@ -25,9 +24,17 @@ function Collapse({ addClass, title, content, open }) {
           />
         </figure>
       </div>
-      <p className={`collapse-content ${isOpen ? 'open' : 'closed'}`}>
-        {content}
-      </p>
+      {isList ? (
+        <ul className={`collapse-content ${isOpen ? 'open' : 'closed'}`}>
+          {content.map((listElt, index) => (
+            <li key={`${listElt}-${index}`}>{listElt}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className={`collapse-content ${isOpen ? 'open' : 'closed'}`}>
+          {content}
+        </p>
+      )}
     </div>
   );
 }

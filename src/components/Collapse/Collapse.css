@@ -30,6 +30,8 @@
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
+  list-style-type: none;
+  margin: 0;
 }
 
 .open {

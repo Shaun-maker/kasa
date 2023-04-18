@@ -47,7 +47,8 @@ function Property() {
         <Collapse
           addClass="property-collapse"
           title="Équipements"
-          content={property.equipements}
+          content={property.equipments}
+          isList={true}
         />
       </div>
     </>
