@@ -2,6 +2,8 @@ import './Carousel.css';
 
 function Carousel({ pictures, title }) {
 
+  // hash function is to have unique key id for each images of carousel, based
+  // on their names
   function hash(str) {
     let hash = 0;
     if (str.length == 0) {
