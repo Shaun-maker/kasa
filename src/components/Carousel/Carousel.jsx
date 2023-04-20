@@ -6,7 +6,7 @@ function Carousel({ pictures, title }) {
   // on their names
   function hash(str) {
     let hash = 0;
-    if (str.length == 0) {
+    if (str.length === 0) {
       return hash;
     }
     for (let i = 0; i < str.length; i++) {
