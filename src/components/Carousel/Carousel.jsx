@@ -5,13 +5,16 @@ import chevronRight from '../../assets/icons/chevron-right-solid.svg';
 import hash from '../../assets/js/hash';
 
 function Carousel({ pictures, title }) {
-  const [isActive, setIsActive] = useState(false);
-  const buttons = document.querySelectorAll('[data-carousel-button]');
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const swapCarousel = (event) => {
     const offset = event.target.dataset.carouselButton === 'next' ? 1 : -1;
-    console.log(offset);
+    let newIndex = activeIndex + offset;
+    if (newIndex < 0) newIndex = pictures.length - 1;
+    if (newIndex >= pictures.length) newIndex = 0;
+    setActiveIndex(newIndex);
   };
+  console.log('activeIndex is : ' + activeIndex);
   return (
     <section className="carousel" data-carousel>
       <div>
@@ -31,7 +34,11 @@ function Carousel({ pictures, title }) {
         </button>
         <span className="carousel-index">1/4</span>
         {pictures.map((picture, index) => (
-          <figure data-index={index} key={hash(picture)} className="slide">
+          <figure
+            data-active={index === activeIndex ? true : false}
+            key={hash(picture)}
+            className="slide"
+          >
             <img className="pictures" src={picture} alt={title} />
           </figure>
         ))}
