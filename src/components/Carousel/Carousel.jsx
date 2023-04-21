@@ -6,6 +6,8 @@ import hash from '../../assets/js/hash';
 
 function Carousel({ pictures, title }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  let singleImage = false;
+  if (pictures.length <= 1) singleImage = true;
 
   const swapCarousel = (event) => {
     const offset = event.target.dataset.carouselButton === 'next' ? 1 : -1;
@@ -17,23 +19,27 @@ function Carousel({ pictures, title }) {
   return (
     <section className="carousel" data-carousel>
       <div>
-        <button
-          onClick={swapCarousel}
-          data-carousel-button="prev"
-          className="carousel-button prev"
-        >
-          <img src={chevronLeft} alt="button prev" />
-        </button>
-        <button
-          onClick={swapCarousel}
-          data-carousel-button="next"
-          className="carousel-button next"
-        >
-          <img src={chevronRight} alt="button next" />
-        </button>
-        <span className="carousel-index">
-          {activeIndex + 1}/{pictures.length}
-        </span>
+        {!singleImage && (
+          <>
+            <button
+              onClick={swapCarousel}
+              data-carousel-button="prev"
+              className="carousel-button prev"
+            >
+              <img src={chevronLeft} alt="button prev" />
+            </button>
+            <button
+              onClick={swapCarousel}
+              data-carousel-button="next"
+              className="carousel-button next"
+            >
+              <img src={chevronRight} alt="button next" />
+            </button>
+            <span className="carousel-index">
+              {activeIndex + 1}/{pictures.length}
+            </span>
+          </>
+        )}
         {pictures.map((picture, index) => (
           <figure
             data-active={index === activeIndex ? true : false}
