@@ -14,7 +14,6 @@ function Carousel({ pictures, title }) {
     if (newIndex >= pictures.length) newIndex = 0;
     setActiveIndex(newIndex);
   };
-  console.log('activeIndex is : ' + activeIndex);
   return (
     <section className="carousel" data-carousel>
       <div>

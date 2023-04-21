@@ -29,7 +29,7 @@ function About() {
           la moindre question."
         />
         <Collapse
-          collapseMargin="my-32"
+          addClass="my-32"
           title="Sécurité"
           content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes 
           que pour les voyageurs, chaque logement correspond aux critères de sécurité 
