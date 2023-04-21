@@ -4,7 +4,24 @@
   padding: 56px;
   margin: 40px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: 56px;
   justify-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 2fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-cards-container {
+    padding: 0;
+    background-color: white;
+  }
+
+  .gallery-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
 }

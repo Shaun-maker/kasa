@@ -27,3 +27,9 @@
   width: 100%;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .top-banner-legend {
+    font-size: 36px;
+  }
+}
