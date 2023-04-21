@@ -18,13 +18,17 @@ function Carousel({ pictures, title }) {
   }
 
   return (
-    <div className="carousel">
-      {pictures.map((picture, index) => (
-        <figure key={hash(picture)} className="pictures-container">
-          <img className="pictures" src={picture} alt={title} />
-        </figure>
-      ))}
-    </div>
+    <section className="carousel">
+      <div>
+        <button className='carousel-button prev'>Prev</button>
+        <button className='carousel-button next'>Next</button>
+        {pictures.map((picture, index) => (
+          <figure key={hash(picture)} className="slide">
+            <img className="pictures" src={picture} alt={title} />
+          </figure>
+        ))}
+      </div>
+    </section>
   );
 }
 

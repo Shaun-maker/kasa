@@ -1,8 +1,21 @@
-.pictures-container {
+.carousel {
+  position: relative;
+  height: 415px;
+  width: 100%;
+}
+
+.slide {
   border-radius: 25px;
   height: 415px;
   width: 100%;
   overflow: hidden;
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+}
+
+.slide[data-active] {
+  opacity: 1;
 }
 
 .pictures {
