@@ -24,7 +24,7 @@ function Property() {
   return (
     <>
       <Carousel pictures={property.pictures} title={property.title} />
-      <div className="flex justify-between">
+      <div className="title-tag-avatar-container">
         <div>
           <PropertyName title={property.title} location={property.location} />
           <ul className="tag-container">

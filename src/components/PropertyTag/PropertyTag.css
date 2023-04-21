@@ -7,4 +7,11 @@
   text-align: center;
   padding: 4px 32px;
   width: fit-content;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .tag {
+    padding: 4px 16px;
+  }
 }

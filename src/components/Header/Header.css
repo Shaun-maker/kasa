@@ -11,9 +11,11 @@
   list-style-type: none;
   color: #ff6060;
   gap: 64px;
+  white-space: nowrap;
+  margin: 0;
 }
 
-.nav a {
+.nav > li > a {
   color: #ff6060;
   text-decoration-color: transparent;
   font-size: 24px;
@@ -23,4 +25,33 @@
 
 .nav a:hover {
   text-decoration-color: #ff6060;
+}
+
+.kasa-logo {
+  margin-right: 64px;
+  /*flex-shrink: 0; */
+}
+
+.kasa-logo > img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 16px;
+  }
+
+  .nav {
+    gap: 16px;
+  }
+
+  .nav > li > a {
+    font-size: 16px;
+  }
+
+  .kasa-logo {
+    width: 164px;
+    margin-right: 32px;
+  }
 }

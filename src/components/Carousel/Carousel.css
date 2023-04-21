@@ -76,8 +76,8 @@
   font-weight: 500;
   font-size: 18px;
   left: 50%;
-  transform: translateY(-50%);
-  bottom: 0.5rem;
+  transform: translate(-50%);
+  bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 8px;
   border-radius: 12px;

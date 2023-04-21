@@ -5,13 +5,10 @@
   padding: 0;
 }
 
-.flex {
-  display: flex;
-}
-
-.justify-between {
+.title-tag-avatar-container {
   justify-content: space-between;
   margin-top: 32px;
+  display: flex;
 }
 
 .property-avatar-rates-container {
@@ -29,4 +26,18 @@
 
 .property-collapse {
   flex-basis: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .property-avatar-rates-container {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0;
+    justify-content: space-between;
+    margin: 16px 0;
+  }
+
+  .title-tag-avatar-container {
+    flex-direction: column;
+  }
 }
