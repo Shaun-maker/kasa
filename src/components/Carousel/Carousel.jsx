@@ -32,7 +32,9 @@ function Carousel({ pictures, title }) {
         >
           <img src={chevronRight} alt="button next" />
         </button>
-        <span className="carousel-index">1/4</span>
+        <span className="carousel-index">
+          {activeIndex + 1}/{pictures.length}
+        </span>
         {pictures.map((picture, index) => (
           <figure
             data-active={index === activeIndex ? true : false}

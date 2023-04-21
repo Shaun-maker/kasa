@@ -20,7 +20,6 @@ function About() {
           content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
           comportement discriminatoire ou de perturbation du voisinage entraînera
           une exclusion de notre plateforme."
-          open={true}
         />
         <Collapse
           addClass="my-32"
