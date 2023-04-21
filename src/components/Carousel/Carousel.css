@@ -59,3 +59,17 @@
 .carousel-button.next {
   right: 1rem;
 }
+
+.carousel-index {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  left: 50%;
+  transform: translateY(-50%);
+  bottom: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  border-radius: 8px;
+}

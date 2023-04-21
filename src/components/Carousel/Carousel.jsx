@@ -27,6 +27,7 @@ function Carousel({ pictures, title }) {
         <button className="carousel-button next">
           <img src={chevronRight} alt="button next" />
         </button>
+        <span className="carousel-index">1/4</span>
         {pictures.map((picture, index) => (
           <figure key={hash(picture)} className="slide">
             <img className="pictures" src={picture} alt={title} />
