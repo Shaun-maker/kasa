@@ -3,6 +3,7 @@
   gap: 16px;
   margin: 24px 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .title-tag-avatar-container {
@@ -35,6 +36,11 @@
     gap: 0;
     justify-content: space-between;
     margin: 16px 0;
+  }
+
+  .property-collapse-container {
+    flex-direction: column;
+    gap: 32px;
   }
 
   .title-tag-avatar-container {

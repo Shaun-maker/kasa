@@ -15,7 +15,7 @@ function Collapse({ addClass, title, content, open, isList }) {
         className="collapse-banner"
         onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
       >
-        <p className="collapse-title">{title}</p>
+        <p>{title}</p>
         <figure className="collapse-container-img">
           <img
             className="collapse-img"
