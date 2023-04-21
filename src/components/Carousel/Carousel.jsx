@@ -1,35 +1,21 @@
 import './Carousel.css';
 import chevronLeft from '../../assets/icons/chevron-left-solid.svg';
 import chevronRight from '../../assets/icons/chevron-right-solid.svg';
+import hash from '../../assets/js/hash';
 
 function Carousel({ pictures, title }) {
-  // hash function is to have unique key id for each images of carousel, based
-  // on their names
-  function hash(str) {
-    let hash = 0;
-    if (str.length === 0) {
-      return hash;
-    }
-    for (let i = 0; i < str.length; i++) {
-      let char = str.charCodeAt(i);
-      hash = (hash << 5) - hash + char;
-      hash = hash & hash; // Convert to 32bit integer
-    }
-    return hash;
-  }
-
   return (
-    <section className="carousel">
+    <section className="carousel" data-carousel>
       <div>
-        <button className="carousel-button prev">
+        <button data-carousel-button="prev" className="carousel-button prev">
           <img src={chevronLeft} alt="button prev" />
         </button>
-        <button className="carousel-button next">
+        <button data-carousel-button="next" className="carousel-button next">
           <img src={chevronRight} alt="button next" />
         </button>
         <span className="carousel-index">1/4</span>
         {pictures.map((picture, index) => (
-          <figure key={hash(picture)} className="slide">
+          <figure data-index={index} key={hash(picture)} className="slide">
             <img className="pictures" src={picture} alt={title} />
           </figure>
         ))}

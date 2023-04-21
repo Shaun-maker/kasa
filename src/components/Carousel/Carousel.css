@@ -43,8 +43,12 @@
 }
 
 .carousel-button:hover,
-.carousel-button:focus {
+.carousel-button:focus-visible {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-button:focus-visible {
+  outline: black solid 1px;
 }
 
 .carousel-button > img {
@@ -71,5 +75,5 @@
   bottom: 0.5rem;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 12px;
 }
