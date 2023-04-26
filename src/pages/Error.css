@@ -18,3 +18,7 @@
   font-size: 24px;
   margin-bottom: 32px;
 }
+
+.error-back-link {
+  color: #ff6060;
+}
