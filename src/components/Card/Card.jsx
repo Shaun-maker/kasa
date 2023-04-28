@@ -6,7 +6,7 @@ function Card({ id, cover, title }) {
     <>
       <Link to={`logements/${id}`}>
         <figure className="card-container">
-          <img className="card-img" src={cover} alt="tata" />
+          <img className="card-img" src={cover} alt={title} />
           <figcaption className="card-legend">{title}</figcaption>
           <div className="gradient-effect"></div>
         </figure>
