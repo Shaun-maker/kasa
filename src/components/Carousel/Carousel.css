@@ -78,7 +78,26 @@
   left: 50%;
   transform: translate(-50%);
   bottom: 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 8px;
   border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .slide {
+    height: 255px;
+  }
+
+  .carousel {
+    height: 255px;
+  }
+
+  .carousel-index {
+    display: none;
+  }
+
+  .carousel-button {
+    width: 48px;
+    height: 48px;
+  }
 }
