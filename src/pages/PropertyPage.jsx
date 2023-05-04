@@ -11,6 +11,9 @@ import fetchData from '../datas/api';
 async function getProperty(propertyId) {
   const datas = await fetchData();
   const property = datas.find((data) => data.id === propertyId);
+  if (!property) {
+    throw new Response("Not found", {status: 404});
+  }
   return property;
 }
 
